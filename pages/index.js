@@ -1,7 +1,9 @@
 import { Grid } from "@material-ui/core";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Post from "../components/Post";
 import { sanityClient } from "../sanity";
+import SearchBar from "../components/SearchBar";
 
 const Home = ({ properties }) => {
   console.log(properties);
@@ -9,7 +11,9 @@ const Home = ({ properties }) => {
   return (
     <div>
         <Navbar />
+        <SearchBar />
         <Post properties={properties}></Post>
+        <Footer />
     </div>
   );
 };
